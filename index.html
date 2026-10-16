@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mirë se vini!</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            color: white;
+            background: linear-gradient(135deg, #0f172a, #1d4ed8, #7c3aed);
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #67e8f9;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #67e8f9;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero {
+            max-width: 750px;
+            animation: appear 1.2s ease;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 10px 18px;
+            border: 1px solid #93c5fd;
+            border-radius: 30px;
+            color: #bfdbfe;
+            margin-bottom: 25px;
+            background: #ffffff12;
+        }
+
+        h1 {
+            font-size: clamp(42px, 8vw, 76px);
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #67e8f9;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #e0e7ff;
+            max-width: 600px;
+            margin: 0 auto 35px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary {
+            color: #0f172a;
+            background: #67e8f9;
+        }
+
+        .secondary {
+            color: white;
+            border: 1px solid #ffffff80;
+            background: #ffffff10;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px #00000030;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+
+        .feature {
+            background: #ffffff12;
+            border: 1px solid #ffffff25;
+            border-radius: 16px;
+            padding: 22px;
+            width: 190px;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature .icon {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .feature h3 {
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            color: #dbeafe;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #c7d2fe;
+            font-size: 14px;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                padding: 22px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+
+            .features {
+                margin-top: 40px;
+            }
+
+            .feature {
+                width: min(100%, 280px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">WEB<span>IME</span></div>
+
+        <div>
+            <a href="#home">Kryefaqja</a>
+            <a href="#rreth">Rreth nesh</a>
+        </div>
+    </nav>
+
+    <main id="home">
+        <div class="hero">
+
+            <div class="tag">✨ Vendi ku fillojnë idetë</div>
+
+            <h1>Mirë se <span>vini!</span></h1>
+
+            <p class="description">
+                Mirë se vini në webfaqen time!
+                Kjo është hapësira ime digjitale,
+                ku kreativiteti, idetë dhe teknologjia
+                bashkohen për të krijuar diçka të veçantë.
+            </p>
+
+            <div class="buttons">
+                <a href="#rreth" class="btn primary">
+                    Zbulo më shumë →
+                </a>
+
+                <a href="mailto:info@example.com" class="btn secondary">
+                    Na kontakto
+                </a>
+            </div>
+
+            <div class="features" id="rreth">
+
+                <div class="feature">
+                    <div class="icon">💡</div>
+                    <h3>Ide të reja</h3>
+                    <p>Inspirim për projekte të veçanta.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="icon">🎨</div>
+                    <h3>Kreativitet</h3>
+                    <p>Dizajn modern dhe ngjyra elegante.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="icon">🚀</div>
+                    <h3>E ardhmja</h3>
+                    <p>Hapi yt i parë drejt botës digjitale.</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 Webi im. Të gjitha të drejtat e rezervuara.
+    </footer>
+
+</body>
+</html>
